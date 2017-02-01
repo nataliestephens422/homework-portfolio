@@ -10,33 +10,32 @@
 //user input to be stored with var city
 
  $('.entry').on('submit', function(event){
-  event.preventDefault();
+  e.preventDefault();
   showCity();
 })
 
-function showCity () {
-    var userEntry = $('#city-type').val();
 
-    var newYork = ["New York", "New York City", "NYC"];
-    var sanFran = ["San Francisco", "SF", "Bay Area"];
-    var losAngeles = ["Los Angeles", "LA", "LAX"];
-    var austin = ["Austin", "ATX"];
-    var sydney = ["Sydney", "SYD"];
+var city = ['NYC', 'SF', 'LA', 'ATX', 'SYD']
 
-    //console.log(userEntry);
 
-    if(userEntry == newYork; || userEntry == newYork; || userEntry == newYork; ) {
-        $('body').css('background','url(../images/nyc.jpg)');
-     } else if(userEntry == sanFran; || userEntry == sanFran; || userEntry == sanFran;) {
-        $('body').css('background','url(../images/sf.jpg)');
-     } else if(userEntry == losAngeles; || userEntry == losAngeles; || userEntry == losAngeles;) {
-        $('body').css('background','url(../images/la.jpg)');
-     } else if(userEntry == austin; || userEntry == austin;) {
-        $('body').css('background','url(../austin.jpg)');
-     } else if(userEntry == sydney; || userEntry == sydney;) {
-        $('body').css('background','url(../images/sydney.jpg)');
-     }
 
-};
+switch (cityPic) {
+  case 'NYC':
+    $('body').attr('class','nyc');
+    break;
+  case 'SF':
+    $('body').attr('class','sf');
+    break;
+  case 'LA':
+    $('body').attr('class','la');
+    break;
+  case 'ATX':
+    $('body').attr('class','austin');
+    break;
+  case 'SYD':
+    $('body').attr('class','sydney');
+    break;
+  default:
+}
 
 
